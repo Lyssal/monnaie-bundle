@@ -4,7 +4,6 @@ namespace Lyssal\MonnaieBundle\Command\Database;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Lyssal\Csv;
-use LaVendee\GeographieBundle\Entity\Pays;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 use Symfony\Component\Config\FileLocatorInterface;
@@ -114,7 +113,7 @@ class UpdateCommand extends Command
             $monnaie->setSymbole($symbole);
             $monnaie->setCode($code);
     
-            $this->monnaieManager->save($pays);
+            $this->monnaieManager->save($monnaie);
         }
     }
 }
