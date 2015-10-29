@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="lyssal.monnaie.admin.monnaie.class">Lyssal\MonnaieBundle\Admin\MonnaieAdmin</parameter>
+    </parameters>
+
+    <services>
+        <service id="lyssal.monnaie.admin.monnaie" class="%lyssal.monnaie.admin.monnaie.class%">
+            <tag name="sonata.admin" manager_type="orm" group="Monnaie" label="Monnaies" route_builder="sonata.admin.route.path_info" icon="&lt;i class='fa fa-money'&gt;&lt;/i&gt;" />
+            <argument/>
+            <argument>%lyssal.monnaie.entity.monnaie.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+    </services>
+
+</container>

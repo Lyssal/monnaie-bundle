@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <imports>
+        <import resource="manager.xml" />
+        <import resource="admin.xml" />
+    </imports>
+    
+    <parameters>
+        <parameter key="lyssal.monnaie.entity.monnaie.class">Lyssal\MonnaieBundle\Entity\Monnaie</parameter>
+    </parameters>
+    
+    <services>
+    	<service id="lyssal.monnaie.command.database.update" class="Lyssal\MonnaieBundle\Command\Database\UpdateCommand">
+    		<argument type="service" id="doctrine" />
+    		<argument type="service" id="file_locator" />
+    		<argument type="service" id="lyssal.monnaie.manager.monnaie" />
+            <tag name="console.command" />
+        </service>
+    </services>
+
+</container>

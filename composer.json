@@ -1,0 +1,27 @@
+{
+	"name" : "lyssal/monnaie-bundle",
+	"description" : "Bundle permettant de gérer des monnaies",
+	"license" : "proprietary",
+	"keywords" : [
+		"monnaie",
+		"devise"
+	],
+	"type" : "symfony-bundle",
+	"authors" : [{
+			"name" : "Rémi Leclerc",
+			"homepage" : "http://www.lyssal.com/"
+		}
+	],
+	"require" : {
+		"lyssal/structure-bundle" : "0.*"
+	},
+	"suggest" : {
+		"lyssal/admin-bundle" : "Pour gérer LyssalMonnaieBundle depuis la console administrative (basé sur SonataAdmin)",
+		"sonata-project/admin-bundle" : "Pour gérer les entités depuis la console administrative"
+	},
+	"autoload" : {
+		"psr-0" : {
+			"Lyssal\\MonnaieBundle" : "src"
+		}
+	}
+}
