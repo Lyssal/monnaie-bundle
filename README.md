@@ -2,6 +2,8 @@
 
 LyssalMonnaieBundle permet la manipulation de monnaies.
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/774e44fd-ac95-4564-abe3-347373fc8043/small.png)](https://insight.sensiolabs.com/projects/774e44fd-ac95-4564-abe3-347373fc8043)
+
 
 ## Entités
 
